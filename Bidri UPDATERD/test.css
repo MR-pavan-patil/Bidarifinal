@@ -1,0 +1,904 @@
+.glow-label {
+    background: #111;
+    color: white;
+    padding: 5px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    display: inline-block;
+}
+
+
+/* 2nd */
+
+.label-badge {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+
+/* 3rd */
+
+.ribbon {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    padding: 8px 20px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+}
+
+.ribbon::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #ff7e5f;
+}
+
+
+/* 4hh */
+
+.background-label {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+
+/* 5th */
+
+.image-box {
+    position: relative;
+    display: inline-block;
+}
+
+.image-label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+/* 6th */
+
+body {
+    background: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* 1. Simple Gradient Hover */
+
+.btn-1 {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    border-radius: 5px;
+}
+
+.btn-1:hover {
+    transform: scale(1.1);
+}
+
+
+/* 2. Slide Up Hover */
+
+.btn-2 {
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-2::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0056b3;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-2:hover::before {
+    top: 0;
+}
+
+
+/* 3. Border Glow */
+
+.btn-3 {
+    background: transparent;
+    color: #ff4b2b;
+    border: 2px solid #ff4b2b;
+    border-radius: 5px;
+}
+
+.btn-3:hover {
+    box-shadow: 0 0 10px #ff4b2b;
+    background: #ff4b2b;
+    color: white;
+}
+
+
+/* 4. Rotate Effect */
+
+.btn-4 {
+    background: #28a745;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn-4:hover {
+    transform: rotate(10deg);
+}
+
+
+/* 5. Shadow Pop */
+
+.btn-5 {
+    background: #6f42c1;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn-5:hover {
+    box-shadow: 0 5px 15px rgba(111, 66, 193, 0.5);
+}
+
+
+/* 6. Underline Hover */
+
+.btn-6 {
+    background: #17a2b8;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+}
+
+.btn-6::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: white;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-6:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+/* 7. Wave Effect */
+
+.btn-7 {
+    background: #ff9800;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-7::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.4s ease-in-out;
+}
+
+.btn-7:hover::before {
+    transform: scale(10);
+    opacity: 0;
+}
+
+
+/* 8. Button Press Effect */
+
+.btn-8 {
+    background: #dc3545;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn-8:active {
+    transform: scale(0.9);
+}
+
+
+/* 9. Neon Effect */
+
+.btn-9 {
+    background: black;
+    color: #0ff;
+    border: 2px solid #0ff;
+    text-shadow: 0 0 5px #0ff;
+}
+
+.btn-9:hover {
+    box-shadow: 0 0 10px #0ff;
+}
+
+
+/* 10. Floating Effect */
+
+.btn-10 {
+    background: #e83e8c;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn-10:hover {
+    transform: translateY(-5px);
+}
+
+
+/* 5 and 9 */
+
+
+/* 5. Enhanced Shadow Pop */
+
+.btn-5 {
+    background: #6f42c1;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-5:hover {
+    box-shadow: 0 5px 15px rgba(111, 66, 193, 0.7);
+    transform: translateY(-3px);
+}
+
+.btn-5::after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: rgba(255, 255, 255, 0.1);
+    top: -50%;
+    left: -50%;
+    transform: rotate(45deg);
+    transition: 0.4s ease-in-out;
+}
+
+.btn-5:hover::after {
+    top: -30%;
+    left: -30%;
+}
+
+
+/* 9. Upgraded Neon Glow */
+
+.btn-9 {
+    background: black;
+    color: #0ff;
+    border: 2px solid #0ff;
+    text-shadow: 0 0 5px #0ff;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.btn-9:hover {
+    box-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 60px #0ff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+    transform: scale(1.1);
+}
+
+.btn-9:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 10px #0ff;
+}
+
+
+/* logo */
+
+
+/* Fullscreen Loader */
+
+#logoLoader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0f2027;
+    /* Deep blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 1s ease-in-out;
+}
+
+
+/* Logo Animation */
+
+#animatedLogo {
+    width: 150px;
+    height: auto;
+    opacity: 0;
+    animation: fadeInZoom 2s ease-in-out forwards;
+}
+
+
+/* Keyframes for Fade & Zoom Effect */
+
+@keyframes fadeInZoom {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* /another one/ */
+
+
+/* Fullscreen Loader */
+
+#logoLoader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #1e2a47, #0f2027);
+    /* Elegant gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 1s ease-in-out;
+}
+
+
+/* Logo Styling */
+
+#animatedLogo {
+    width: 180px;
+    /* Adjust size */
+    height: auto;
+    opacity: 0;
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.6));
+    /* Gold glow */
+    animation: fadeZoom 2s ease-in-out forwards, glowEffect 2s infinite alternate ease-in-out;
+}
+
+
+/* Keyframes for Fade & Zoom */
+
+@keyframes fadeZoom {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    70% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Glowing effect for luxury feel */
+
+@keyframes glowEffect {
+    0% {
+        filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.4));
+    }
+    100% {
+        filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.8));
+    }
+}
+
+
+/* Sponsors Section: */
+
+.sponsors {
+    text-align: center;
+    padding: 50px 20px;
+    background: #0f172a;
+    /* Dark blue background */
+    color: white;
+}
+
+.sponsors h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+/* Scrolling Container */
+
+.sponsor-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+}
+
+
+/* Sponsor Track */
+
+.sponsor-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+
+
+/* Sponsor Logos */
+
+.sponsor-track img {
+    width: 120px;
+    /* Adjust size */
+    margin: 0 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sponsor-track img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Infinite Scroll Animation */
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* Main Background */
+
+#contact {
+    background: linear-gradient(to right, #141e30, #243b55);
+    padding: 60px 0;
+}
+
+
+/* Card Styling */
+
+.contact-box {
+    background: rgba(255, 255, 255, 0.05);
+    /* Slight transparency */
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Text Styling */
+
+.contact-box h3 {
+    color: #f1c40f;
+    font-weight: bold;
+}
+
+
+/* Input Fields */
+
+.contact-box .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+
+/* Placeholder Text */
+
+.contact-box .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* Send Button */
+
+.contact-box .btn-warning {
+    background: #f1c40f;
+    border: none;
+    color: #141e30;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.contact-box .btn-warning:hover {
+    background: #ffdd00;
+}
+
+
+/* Social Icons */
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f1c40f;
+}
+
+
+/* Google Maps */
+
+iframe {
+    border-radius: 12px;
+    width: 100%;
+    height: 300px;
+}
+
+
+/* sdfghjkljghfhjk */
+
+
+/* Section Styling */
+
+.event-timeline-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: #0a0a0a;
+    color: #fff;
+}
+
+
+/* award sention */
+
+
+/* Award Section Styling */
+
+.award-section {
+    background: #121212;
+    color: white;
+    padding: 80px 10%;
+    text-align: center;
+    position: relative;
+}
+
+
+/* Trophy Showcase */
+
+.trophy-showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.trophy-img {
+    width: 120px;
+    animation: glowEffect 2s infinite alternate;
+}
+
+
+/* Section Title */
+
+.award-section h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.award-section h2 span {
+    color: #FFD700;
+    /* Gold Color */
+}
+
+
+/* Event Winners Grid */
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+
+/* Award Card */
+
+.award-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.award-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+
+
+/* Award Image */
+
+.award-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* Award Info */
+
+.award-info {
+    padding: 15px 0;
+}
+
+.award-info h3 {
+    font-size: 1.4rem;
+    color: #FFD700;
+}
+
+
+/* Winner Popup */
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup-content {
+    background: #222;
+    padding: 25px;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+
+.popup-content img {
+    width: 80%;
+    border-radius: 8px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+
+/* Glow Effect */
+
+@keyframes glowEffect {
+    0% {
+        filter: drop-shadow(0px 0px 5px gold);
+    }
+    100% {
+        filter: drop-shadow(0px 0px 15px gold);
+    }
+}
+
+
+/* Styling for Tab Buttons */
+
+.event-tabs {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.tab-btn.active {
+    background: #ffaa00;
+}
+
+
+/* Image Grid */
+
+.event-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.event-images {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.event-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+/* Show Active Event Images */
+
+.event-images.active {
+    display: grid;
+}
+
+.award-section {
+    background-color: #121212;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.trophy-img {
+    width: 100px;
+    margin-bottom: 30px;
+}
+
+.award-heading {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #FFD700;
+}
+
+.award-heading span {
+    color: #fff;
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.award-card {
+    background: #1e1e1e;
+    border: 2px solid #FFD700;
+    border-radius: 12px;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.award-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+.award-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.award-info h3 {
+    color: #FFD700;
+    margin: 5px 0;
+}
+
+.award-info p {
+    color: #ccc;
+}
+
+
+/* 🟣 Popup Modal Styling */
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.popup-content {
+    background-color: #1a1a1a;
+    color: #FFD700;
+    padding: 30px 40px;
+    border-radius: 12px;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+}
+
+.popup-content h2 {
+    margin-bottom: 10px;
+}
+
+.popup-content p {
+    font-size: 1.1rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #FFD700;
+    cursor: pointer;
+}

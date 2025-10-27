@@ -1,0 +1,144 @@
+/* Navbar Container */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #0a0a0a;
+    color: #fff;
+}
+
+
+/* Navbar Container */
+
+
+/* Mobile Toggle (optional for future responsiveness) */
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* Mobile Menu */
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #ffcc00;
+}
+
+.committee-section {
+    background-color: #121212;
+    padding: 80px 20px;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.committee-heading {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 70px;
+    color: #ffffff;
+    border-bottom: 3px solid #ffffff33;
+    padding-bottom: 12px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.member-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+    /* gap: 40px; */
+}
+
+.member-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.member-text,
+.member-img {
+    flex: 1 1 450px;
+    max-width: 600px;
+    padding: 10px 20px;
+}
+
+.member-text h3 {
+    font-size: 1.9rem;
+    margin-bottom: 14px;
+    color: #ffd700;
+}
+
+.member-text p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+    margin-bottom: 12px;
+}
+
+.member-img img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.member-img img:hover {
+    transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+    .member-row,
+    .member-row.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+    .member-text,
+    .member-img {
+        padding: 10px 10px;
+    }
+    .committee-heading {
+        font-size: 2.2rem;
+    }
+    .member-row {
+        margin-left: -35px;
+        width: 100%;
+    }
+    .member-img img {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+
+/* new  */
+
+.member-row {
+    display: flex;
+    align-items: center;
+    /* gap: 30px; */
+    margin-bottom: 40px;
+}
+
+.member-img img {
+    width: 350px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    margin-left: 50px;
+}
+
+.member-text {
+    max-width: 650px;
+}

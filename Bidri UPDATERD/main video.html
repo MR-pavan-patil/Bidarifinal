@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bidari Utsav</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main video.css">
+</head>
+
+<body>
+
+
+
+
+    <section class="video-gallery">
+        <h2 class="section-title">🎬 Event Video Highlights</h2>
+
+        <div class="tab-buttons">
+            <button class="tab-btn active" onclick="showVideos(0)">Event 1</button>
+            <button class="tab-btn" onclick="showVideos(1)">Event 2</button>
+            <button class="tab-btn" onclick="showVideos(2)">Event 3</button>
+            <button class="tab-btn" onclick="showVideos(3)">Event 4</button>
+            <button class="tab-btn" onclick="showVideos(4)">Event 5</button>
+            <button class="tab-btn" onclick="showVideos(5)">Event 6</button>
+            <button class="tab-btn" onclick="showVideos(6)">Event 7</button>
+        </div>
+
+        <div class="video-container">
+            <div class="video-tab active">
+                <div class="video-grid">
+                    <div class="video-item" onclick="openVideo('https://www.youtube.com/embed/YOUR_VIDEO_ID1')">
+                        <img src="thumbnail1.jpg" alt="Video 1">
+                        <span class="play-btn">▶</span>
+                    </div>
+                    <div class="video-item" onclick="openVideo('https://www.youtube.com/embed/YOUR_VIDEO_ID2')">
+                        <img src="thumbnail2.jpg" alt="Video 2">
+                        <span class="play-btn">▶</span>
+                    </div>
+                    <div class="video-item" onclick="openVideo('https://www.youtube.com/embed/YOUR_VIDEO_ID3')">
+                        <img src="thumbnail3.jpg" alt="Video 3">
+                        <span class="play-btn">▶</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-tab">
+                <div class="video-grid">
+                    <div class="video-item" onclick="openVideo('https://www.youtube.com/embed/YOUR_VIDEO_ID1')">
+                        <img src="thumbnail1.jpg" alt="Video 1">
+                        <span class="play-btn">▶</span>
+                    </div>
+                    <div class="video-item" onclick="openVideo('https://www.youtube.com/embed/YOUR_VIDEO_ID2')">
+                        <img src="thumbnail2.jpg" alt="Video 2">
+                        <span class="play-btn">▶</span>
+                    </div>
+                    <div class="video-item" onclick="openVideo('https://www.youtube.com/embed/YOUR_VIDEO_ID3')">
+                        <img src="thumbnail3.jpg" alt="Video 3">
+                        <span class="play-btn">▶</span>
+                    </div>
+                </div>
+                <!-- More videos for other events -->
+            </div>
+        </div>
+
+        <!-- Video Lightbox -->
+        <div id="video-lightbox" onclick="closeVideo()">
+            <div class="video-popup">
+                <iframe id="lightbox-video" src="" allowfullscreen></iframe>
+                <button class="close-btn" onclick="closeVideo()">✖</button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- AOS JavaScript Library -->
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main video.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

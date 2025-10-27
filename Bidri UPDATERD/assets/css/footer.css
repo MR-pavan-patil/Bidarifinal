@@ -1,0 +1,95 @@
+footer {
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+    padding: 20px 20px;
+}
+
+.footer-logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer-logo img {
+    height: 60px;
+    /* Adjust logo size */
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    /* Center align all content */
+}
+
+.footer-section h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #FFD700;
+    /* Gold color for headings */
+}
+
+.footer-section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #FFD700;
+    /* Gold color on hover */
+}
+
+.social-media a {
+    font-size: 24px;
+    color: white;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #FFD700;
+    /* Gold color on hover */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+    .footer-section {
+        text-align: center;
+        /* Center align on mobile */
+    }
+}

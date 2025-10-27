@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bidari Utsav - Day 1 Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        /* General Styling */
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #121212;
+            /* Dark theme */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow-x: hidden;
+        }
+        /* Full Overlay */
+        
+        .overlay {
+            text-align: center;
+            padding-top: 60px;
+        }
+        /* Heading */
+        
+        h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #ffcc00;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        /* Timeline Container */
+        
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Timeline Vertical Line */
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background: #ffcc00;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        /* Event Container */
+        
+        .event-container {
+            position: relative;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            width: 45%;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
+        }
+        
+        .event-container:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+        /* Left Events */
+        
+        .left {
+            left: 0;
+        }
+        /* Right Events */
+        
+        .right {
+            left: 55%;
+        }
+        /* Time Circle */
+        
+        .circle {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            /* background: #ffcc00; */
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        /* Event Image */
+        
+        .event-image {
+            width: 100%;
+            border-radius: 10px;
+            height: 180px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        /* Text Styling */
+        
+        .event-container h3 {
+            color: #ffcc00;
+            font-size: 1.8rem;
+        }
+        
+        .event-container p {
+            font-size: 1.1rem;
+            color: #fff;
+        }
+        /* Floating Icons Fix */
+        
+        .floating-icons i {
+            position: absolute;
+            font-size: 50px;
+            color: #ffd700;
+            opacity: 0.9;
+            animation: floatAnimation 6s infinite ease-in-out;
+        }
+        /* Adjusted Positions */
+        
+        .floating-icons .fa-music {
+            top: 10%;
+            left: 10%;
+        }
+        
+        .floating-icons .fa-microphone {
+            top: 30%;
+            left: 80%;
+        }
+        
+        .floating-icons .fa-trophy {
+            top: 60%;
+            left: 50%;
+        }
+        
+        .floating-icons .fa-gift {
+            top: 85%;
+            left: 20%;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes floatAnimation {
+            0% {
+                transform: translateY(0);
+                opacity: 0.8;
+            }
+            50% {
+                transform: translateY(-20px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 0.8;
+            }
+        }
+        /* Responsive Design */
+        
+        @media (max-width: 768px) {
+            .timeline::after {
+                left: 30px;
+            }
+            .event-container {
+                width: 80%;
+                left: 10%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <h1>Day 1 - Event Schedule</h1>
+        <div class="timeline">
+            <div class="event-container left">
+                <div class="circle"></div>
+                <img src="your-image-url-here" class="event-image" alt="Singing Competition">
+                <h3>🎤 Singing Competition</h3>
+                <p>🕘 10:00 AM - 1:00 PM</p>
+                <p>👦 Age Group: 8-14 years</p>
+                <p>🏆 Gifts for winners on Day 2</p>
+            </div>
+            <div class="event-container right">
+                <div class="circle"></div>
+                <img src="your-image-url-here" class="event-image" alt="Cultural Performances">
+                <h3>🎭 Cultural Performances</h3>
+                <p>🕑 2:00 PM - 4:00 PM</p>
+                <p>🌍 Traditional Dance & Music Show</p>
+            </div>
+            <div class="event-container left">
+                <div class="circle"></div>
+                <img src="your-image-url-here" class="event-image" alt="Theatre Show">
+                <h3>🎬 Special Theatre Show</h3>
+                <p>🕓 4:30 PM - 6:00 PM</p>
+                <p>🎭 Drama & Artistic Performance</p>
+            </div>
+            <div class="event-container right">
+                <div class="circle"></div>
+                <img src="your-image-url-here" class="event-image" alt="Prize Distribution">
+                <h3>🏅 Prize Distribution</h3>
+                <p>🕕 6:00 PM - 7:00 PM</p>
+                <p>🎁 Gifts & Awards</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Icons -->
+    <div class="floating-icons">
+        <i class="fas fa-music"></i>
+        <i class="fas fa-microphone"></i>
+        <i class="fas fa-trophy"></i>
+        <i class="fas fa-gift"></i>
+    </div>
+</body>
+
+</html>

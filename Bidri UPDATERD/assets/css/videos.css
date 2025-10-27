@@ -1,0 +1,122 @@
+.video-gallery {
+    text-align: center;
+    padding: 60px 10%;
+    background-color: #222;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.video-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.video-box:hover {
+    transform: scale(1.05);
+}
+
+.video-box iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+
+/* hero */
+
+
+/* 🎬 Hero Section */
+
+.hero-video-gallery {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    /* Half-screen */
+    background: url('your-background-image.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+
+/* Dark Overlay for Better Readability */
+
+.hero-video-gallery::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+
+/* 🎤 Hero Content */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+
+/* 🎟️ Call-to-Action Button */
+
+.btn {
+    display: inline-block;
+    background: #ffcc00;
+    color: #222;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #ffaa00;
+}
+
+
+/* video real */
+
+.hero-video-gallery {
+    background: none;
+    position: relative;
+}
+
+.hero-video-gallery video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
