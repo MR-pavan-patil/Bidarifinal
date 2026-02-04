@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Rekha Apparao Sowdi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background: #1a1a1a;
+        }
+        
+        .about-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        .about-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .about-header h1 {
+            font-size: 3rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .about-header h1 .highlight {
+            color: #FFD700;
+        }
+        
+        .about-header .subtitle {
+            font-size: 1.5rem;
+            color: #FFD700;
+            font-weight: 500;
+        }
+        
+        .divider {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #FFD700, #FFA500);
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .about-image {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+            height: 500px;
+            border: 2px solid #FFD700;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .about-text h2 {
+            font-size: 2rem;
+            color: #FFD700;
+            margin-bottom: 20px;
+        }
+        
+        .about-text p {
+            font-size: 1.1rem;
+            color: #d4d4d4;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+            border: 2px solid #FFD700;
+        }
+        
+        .highlight-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #FFD700;
+        }
+        
+        .highlight-box p {
+            color: #d4d4d4;
+        }
+        
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .expertise-card {
+            background: #2a2a2a;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #FFD700;
+        }
+        
+        .expertise-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+            background: #333333;
+        }
+        
+        .expertise-card h4 {
+            color: #FFD700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .expertise-card p {
+            color: #c4c4c4;
+            font-size: 0.95rem;
+        }
+        
+        .achievements-section {
+            background: #2a2a2a;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            margin-top: 40px;
+            border: 2px solid #333333;
+        }
+        
+        .achievements-section h2 {
+            font-size: 2rem;
+            color: #FFD700;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .achievement-item {
+            padding: 25px;
+            margin-bottom: 20px;
+            background: #1a1a1a;
+            border-radius: 10px;
+            border-left: 5px solid #FFD700;
+            transition: all 0.3s ease;
+        }
+        
+        .achievement-item:hover {
+            background: #333333;
+            transform: translateX(10px);
+        }
+        
+        .achievement-item h3 {
+            color: #FFD700;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        
+        .achievement-item p {
+            color: #d4d4d4;
+            font-size: 1.05rem;
+        }
+        
+        .quote-box {
+            background: #2a2a2a;
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #FFD700;
+        }
+        
+        .quote-box::before {
+            content: '"';
+            font-size: 150px;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            opacity: 0.1;
+            font-family: Georgia, serif;
+            color: #FFD700;
+        }
+        
+        .quote-box p {
+            font-size: 1.3rem;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+            color: #d4d4d4;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #FFD700;
+            margin: 40px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            .about-header h1 {
+                font-size: 2rem;
+            }
+            .about-header .subtitle {
+                font-size: 1.2rem;
+            }
+            .about-image {
+                height: 400px;
+            }
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+            .achievements-section {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="about-section">
+        <!-- Header -->
+        <div class="about-header">
+            <h1><span class="highlight">Rekha</span> Apparao Sowdi</h1>
+            <div class="divider"></div>
+            <p class="subtitle">Eminent Artist & Performer</p>
+        </div>
+
+        <!-- About Content -->
+        <div class="about-content">
+            <div class="about-image">
+                <img src="assets/images madam/final-h4.jpg" alt="Rekha Sowdi performing">
+            </div>
+            <div class="about-text">
+                <h2>Introduction</h2>
+                <p>Rekha Apparao Sowdi is an eminent artist and performer who has successfully represented Bidar on various cultural platforms in different forms of singing. She is now committed to showcasing the rich and varied folk forms of Kalyana Karnataka
+                    Region with Bidar being the focus region.</p>
+                <p>It's with this farsighted vision, Rekha Sowdi alongside prominent artists and family members has floated "BIDARI-The Cultural Forum of Bidar District", a multi-Cultural platform based in Bidar.</p>
+            </div>
+        </div>
+
+        <!-- Highlight Box -->
+        <div class="highlight-box">
+            <h3>Musical Journey</h3>
+            <p>Rekha Sowdi's Singing is exciting and captivating especially when it comes to Semi Classical songs. She eases into Bollywood chartbusters, Sandlewood Kannada Film Songs, Janapada Sangeet, Ranga Geete and shows justice to all of them.</p>
+            <p>Music has opened her to many avenues, from learning more regional languages to experimenting with other singers and also to train herself to become proficient in classical music. She sings in different languages.</p>
+        </div>
+
+        <!-- Expertise Section -->
+        <h2 class="section-title">Areas of Expertise</h2>
+        <div class="expertise-grid">
+            <div class="expertise-card">
+                <h4>🎵 Semi Classical Songs</h4>
+                <p>Exciting and captivating performances in semi-classical genre</p>
+            </div>
+            <div class="expertise-card">
+                <h4>🎬 Bollywood & Sandlewood</h4>
+                <p>Bollywood chartbusters and Kannada Film Songs</p>
+            </div>
+            <div class="expertise-card">
+                <h4>🎭 Folk Music</h4>
+                <p>Janapada Sangeet and Ranga Geete from Karnataka</p>
+            </div>
+            <div class="expertise-card">
+                <h4>🎼 Classical Music</h4>
+                <p>Proficient in classical music with tremendous grip on complexities</p>
+            </div>
+            <div class="expertise-card">
+                <h4>🌍 Multi-lingual</h4>
+                <p>Performs in different regional languages</p>
+            </div>
+            <div class="expertise-card">
+                <h4>🎤 Stage Presence</h4>
+                <p>Awesome control and mesmerizing stage presence</p>
+            </div>
+        </div>
+
+        <!-- Quote -->
+        <div class="quote-box">
+            <p>When not practicing, she is a complete home maker taking care of her two lovely daughters and doting husband. She likes to hum songs from her favourite playback singers like Lata Mangeshkar, S. Janaki, Lata Hamsalekha, Shreya Ghoshal and many
+                more.
+            </p>
+        </div>
+
+        <!-- Achievements Section -->
+        <div class="achievements-section">
+            <h2>Major Achievements</h2>
+
+            <div class="achievement-item">
+                <h3>Janapara Utsav-16</h3>
+                <p>She held the attention of 15000 strong crowd and captivated their Minds with 15 mesmerizing solo/duet songs at state level "JANAPARA UTSAVA-2016-17" held at Nehru Stadium Bidar. The audience were thrilled to hear and were seen asking for
+                    more.
+                </p>
+            </div>
+
+            <div class="achievement-item">
+                <h3>Hampi Utsav 2017</h3>
+                <p>A proud feeling and sense of accomplishment felt after performing for an outstanding audience and got a rousing ovation at "Hampi Utsav 2017".</p>
+            </div>
+
+            <div class="achievement-item">
+                <h3>HAMPI UTSAV 2018</h3>
+                <p>Again Rekha Sowdi's team was one of the best performers at HAMPI UTSAV 2018 as they performed Kannada & Hindi Film Songs.</p>
+            </div>
+
+            <div class="achievement-item">
+                <h3>BIDARI Launch - September 2019</h3>
+                <p>With this sole intention "BIDARI" was launched on the 16th of September 2019, with much pomp and participation of close to 600 artists from all parts of Kalyana Karnataka Region, added more glory to this vision. The event was a daylong
+                    celebration of the art forms and artists, attended by connoisseurs, music lovers and all elected representatives of Karnataka State.</p>
+            </div>
+
+            <div class="achievement-item">
+                <h3>Rastriya Rangotsava Shivamogg Award</h3>
+                <p>Rekha Apparao Sowdi was awarded with best Melody "RASTRIYA RANGOTSAVA STATE AWARD" Organized by Kannada Film Songs RANGOSTSAV at Nandi Circle in Shivamogg with KannaDa and Karnataka.</p>
+            </div>
+
+            <div class="achievement-item">
+                <h3>Government Recognition</h3>
+                <p>At present she is a regular face at all music related programs in Bidar and around Karnataka. Be it Government functions or commemorative programs for musical legends, she is fast transforming into a multidimensional singer.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

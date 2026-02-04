@@ -93,14 +93,14 @@
 
     <script>
         function startCountdown() {
-            const eventDate = new Date('November 9, 2025 00:00:00').getTime();
+            const eventDate = new Date('january 11 , 2026 00:00:00').getTime();
             const timer = setInterval(() => {
                 const now = new Date().getTime();
                 const remaining = eventDate - now;
 
                 if (remaining < 0) {
                     clearInterval(timer);
-                    document.getElementById('countdown').innerHTML = "🎆 2025 Bidari Utsav!   🎆";
+                    document.getElementById('countdown').innerHTML = "🎆 2026 Bidari Utsav!   🎆";
                     return;
                 }
 
